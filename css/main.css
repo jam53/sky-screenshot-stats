@@ -87,7 +87,28 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+:root {
+    --main-color: #5865F2;
+    --secondary-color: #98aae7;
+    --secondary-color-r: 114;
+    --secondary-color-g: 137;
+    --secondary-color-b: 218;
+    --background-color: rgb(40, 42, 46);
+    --secondary-background-color: rgb(45, 47, 51);
+    --accent-background-color: rgb(37, 38, 41);
+    --third-background-color: rgb(32, 34, 37);
+    --box-background-color: rgb(48, 50, 54);
+}
 
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Ubuntu", sans-serif;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
