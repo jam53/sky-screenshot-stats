@@ -2,7 +2,7 @@ const root = document.getElementById("root");
 root.className = "landingpage";
 
 let description = document.createElement("h1");
-description.innerHTML = "Almost before we knew it, we had left the ground.";
+description.innerHTML = "Sky Screenshot Stats";
 
 let folderPicker = document.createElement("folder-picker");
 
