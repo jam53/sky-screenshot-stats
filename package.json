@@ -7,7 +7,7 @@
   "author": "jam54",
   "scripts": {
     "build": "rimraf ./bin && parcel build index.html --out-dir ./bin",
-    "dev": "rimraf ./bin && parcel index.html --open",
+    "dev": "rimraf ./dist && parcel index.html --out-dir ./dist --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
