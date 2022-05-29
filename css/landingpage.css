@@ -10,9 +10,12 @@ input[type="file"] {
     cursor: pointer;
 }
 .landingpage {
-    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 60px;
 }
 
-h1 {
+.landingpage li {
     color: white;
+    text-align: left;
 }

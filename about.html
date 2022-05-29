@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sky Screenshot Stats</title>
+    <meta name="description" content="Gain an insight in your Sky playtime & other stats by analyzing the screenshots you took over your journey through the world of Sky: Children Of The Light ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Sky Screenshot Stats">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="jam53.github.io/skyscreenshotstats">
+    <meta property="og:image" content="/icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/landingpage.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div class="topnav">
+    <a href="/">Sky Screenshot Stats</a>
+</div>
+
+<div id="root" class="landingpage">
+    <p style="text-align: center">
+        <em>Sky Screenshot Stats</em>
+        is a website that gives you an insight in your Sky playtime & some other statistics.
+        This is achieved by analyzing the date at which your screenshots were taken.
+        It is your device that processes the data, nothing is sent to any server!
+    </p>
+
+    <folder-picker></folder-picker>
+
+    <hr>
+    <h1>
+        ipdddddv wall of text, gewoon linkje naar andere pagina met uitleg
+    </h1>
+    <p>
+        The creation date based on which the statistics are calculated, is retrieved by one of the following 2 ways:
+    </p>
+    <ul>
+        <li>The program first looks to the pictures' file names, to see if these contain the creation date.</li>
+        <li>If the file name doesn't contain a valid date, then the program looks to the creation date of the file, inside the file's properties.</li>
+    </ul>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>
+            Note: Sometimes the creation date of a file gets overwritten in the file's properties.
+            For example when you open the image, make changes to it and save it.
+            In this that file is no longer valid.
+        </p>
+        <p>
+            In such cases, if neither the creation date in the properties of the file is valid, nor the file name contains a valid date.
+            <br>
+            The file will be ignored, and won't be used to generate the statistics.
+            The page that displays the statistics, also has a metric that shows how many files were processed, and how many were invalid.
+        </p>
+
+    </blockquote>
+</div>
+
+<div class="bottomnav">
+    <p>
+        Made by <a href="https://jam53.github.io/jam54/about">jam54</a>.
+        Sky Screenshot Stats is <a href="https://github.com/jam53/sky-screenshot-stats">open source</a> software.
+        <a href="/about.html">About</a>.
+    </p>
+</div>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/vendor/plugins.js"></script>
+<script src="js/LandingPage.js"></script>
+<script src="js/CustomElements/FolderPicker.js"></script>
+
+
+</body>
+
+</html>
