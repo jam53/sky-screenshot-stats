@@ -1,21 +1,75 @@
+:root {
+    --main-color: #5865F2;
+    --secondary-color: #98aae7;
+    --secondary-color-r: 114;
+    --secondary-color-g: 137;
+    --secondary-color-b: 218;
+    --background-color: rgb(40, 42, 46);
+    --secondary-background-color: rgb(45, 47, 51);
+    --accent-background-color: rgb(37, 38, 41);
+    --third-background-color: rgb(32, 34, 37);
+    --box-background-color: rgb(53, 53, 58);
+    --light-accent-color: rgb(103, 93, 93);
+}
+
+/*folder-picker*/
 input[type="file"] {
-    position: fixed;
-    right: 100%;
-    bottom: 100%;
+    display: none;
 }
+/*folder-picker*/
 .custom-file-upload {
-    border: 1px solid #ccc;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    padding: 6px 12px;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
     cursor: pointer;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 5px;
+    border: 2px dashed var(--main-color);
 }
+
+.custom-file-upload svg {
+    padding-bottom: 10px;
+    stroke: rgba(var(--secondary-color-r), var(--secondary-color-g), var(--secondary-color-b), 0.4);
+}
+
+.custom-file-upload:hover {
+    background-color: rgba(var(--secondary-color-r), var(--secondary-color-g), var(--secondary-color-b), 0.3);
+}
+
 .landingpage {
-    width: 45%;
+    text-align: center;
+    width: 40%;
     margin: 0 auto;
     padding-top: 60px;
 }
 
-.landingpage li {
+.button {
+    border: none;
     color: white;
-    text-align: left;
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: rgba(var(--secondary-color-r), var(--secondary-color-g), var(--secondary-color-b), 0.1);
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.button1:hover {
+    background-color: rgba(var(--secondary-color-r), var(--secondary-color-g), var(--secondary-color-b), 0.3);
+    color: white;
 }
