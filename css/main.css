@@ -97,7 +97,7 @@ textarea {
     --secondary-background-color: rgb(45, 47, 51);
     --accent-background-color: rgb(37, 38, 41);
     --third-background-color: rgb(32, 34, 37);
-    --box-background-color: rgb(48, 50, 54);
+    --box-background-color: rgb(53, 53, 58);
 }
 
 @font-face {
@@ -105,9 +105,79 @@ textarea {
     src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
+}
+
 body {
     background-color: var(--background-color);
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: var(--secondary-background-color);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav {
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.topnav a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.bottomnav {
+    background-color: var(--third-background-color);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.bottomnav {
+    text-align: left;
+    padding: 0 16px;
+}
+
+.bottomnav a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+em {
+    color: var(--secondary-color);
+    font-style: unset;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote {
+    padding: 5px;
+    background: var(--box-background-color);
+    border-radius: 5px;
+    border-left: 3px solid var(--secondary-color);
+    font-style: italic;
 }
 /* ==========================================================================
    Helper classes
