@@ -1,7 +1,7 @@
 {
     "name": "sky-screenshot-stats",
     "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "keywords": "",
     "license": "LGPL-3.0-only",
