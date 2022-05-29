@@ -173,11 +173,15 @@ blockquote {
 }
 
 blockquote {
-    padding: 5px;
+    padding: 5px 10px 5px 15px;
     background: var(--box-background-color);
     border-radius: 5px;
     border-left: 3px solid var(--secondary-color);
-    font-style: italic;
+}
+
+ul {
+    color: white;
+    text-align: left;
 }
 /* ==========================================================================
    Helper classes
