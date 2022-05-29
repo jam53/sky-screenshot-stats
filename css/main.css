@@ -149,7 +149,7 @@ body {
     padding: 0 16px;
 }
 
-.bottomnav a{
+a{
     color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
