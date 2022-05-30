@@ -1,13 +1,13 @@
 {
     "name": "sky-screenshot-stats",
     "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "keywords": "",
     "license": "LGPL-3.0-only",
     "author": "jam54",
     "scripts": {
-        "build": "rimraf ./bin && parcel build index.html --public-url='/sky-screenshot-stats' --dist-dir ./bin",
+        "build": "rimraf ./bin && parcel build index.html --public-url ./ --dist-dir ./bin",
         "dev": "rimraf ./dist && parcel index.html --dist-dir ./dist --open",
         "start": "npm run build && npm run dev",
         "test": "echo \"Error: no test specified\" && exit 1"
