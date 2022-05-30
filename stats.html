@@ -7,7 +7,7 @@
     <meta name="description" content="Gain an insight in your Sky playtime & other stats by analyzing the screenshots you took over your journey through the world of Sky: Children Of The Light ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="Sky Screenshot Stats">
+    <meta property="og:title" content="Stats | Sky Screenshot Stats">
     <meta property="og:type" content="website">
     <meta property="og:url" content="jam53.github.io/skyscreenshotstats">
     <meta property="og:image" content="/icon.png">
@@ -19,41 +19,18 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/landingpage.css">
+    <link rel="stylesheet" href="css/stats.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
     <div class="topnav">
         <a href="/">Sky Screenshot Stats</a>
     </div>
 
-    <div id="root" class="landingpage">
-        <p style="text-align: center">
-            <em>Sky Screenshot Stats</em>
-            is a website that gives you an insight in your Sky playtime & some other statistics.
-            This is achieved by analyzing the date at which your screenshots were taken.
-            It is your device that processes the data, nothing is sent to any server!
-        </p>
+    <div id="root" class="stats">
 
-        <br>
-
-        <button class="button button1" onclick="window.open('howitworks.html', '_self')">How it works</button>
-
-        <br><br><br>
-
-        <folder-picker id="folder"></folder-picker>
-
-        <br><br><br>
-
-        <button class="button button1" onclick="window.open('https://discord.gg/z6wEvv7')">Need help? Chat with us on Discord!</button>
-
-        <br><br>
-        <p>
-            No screenshots yet? <a href="">demo</a>
-        </p>
     </div>
 
     <div class="bottomnav">
@@ -64,16 +41,8 @@
         </p>
     </div>
 
-    <div class="hidden">
-        <a href="/howitworks.html">How It Works</a>.
-        <a href="stats.html">Stats</a>
-    </div>
     <script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script type="module" src="js/vendor/plugins.js"></script>
-    <script type="module" src="js/landingpage.js"></script>
-    <script type="module" src="js/CustomElements/FolderPicker.js"></script>
-
-
+    <script type="module" src="js/stats.js"></script>
 </body>
-
 </html>
