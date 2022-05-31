@@ -5,78 +5,32 @@
  */
 document.getElementById("folder").addEventListener("change", function (event)
 {
-    const creationDates = new Set(); //This set contains the creation date of all (valid) files in Unix time
+    document.getElementById("folder").className = "hidden";
+    document.getElementById("loadingIcon").className = "";
+    const loadingText = document.getElementById("loadingText");
+
+    let worker = new Worker(new URL("./WebWorkers/GenerateCreationDates.js", import.meta.url));
 
     const files = ([...event.target.files]).filter(file => file && file['type'].split('/')[0] === 'image'); //Remove all non image files
+    worker.postMessage(files);
 
-    for (let file of files)
+    worker.onmessage = function (event)
     {
-        let fileName = file.name;
-        let dateTime; //The dateTime the screenshot was taken, in Unix time, adjusted to the user's local timezone
-
-        let matchesDate;
-        let matchesTime;
-
-        //region IOS (Extract Unix time from filename)
-        if (fileName.toLowerCase().match(/(am\.[^.]*$|pm\.[^.]*$)/))
+        if (typeof event.data !== "string")
         {
-            matchesDate = fileName.match(/(20\d\d).?([0-1]\d).?([0-3]\d)/) || Array(4).fill("");
+            let generatedData = event.data;
 
-            fileName = fileName.replace(matchesDate[1], "");
-            fileName = fileName.replace(matchesDate[2], "");
-            fileName = fileName.replace(matchesDate[3], "");
+            console.log(generatedData);
 
-            matchesTime = fileName.match(/([ 12]\d).?([0-5]\d).?([0-5]\d)/) || Array(4).fill("");
-
-            matchesDate = matchesDate.map(match => parseInt(match));
-            matchesTime = matchesTime.map(match => parseInt(match));
-
-            matchesTime[1] += fileName.toLowerCase().match(/am\.[^.]*$/) ? 0 : 12;
-
-            dateTime = (new Date(matchesDate[1], matchesDate[2] - 1, matchesDate[3], matchesTime[1], matchesTime[2], matchesTime[3])).getTime();
+            // window.localStorage.setItem("validFilesAmount", JSON.stringify(creationDates.size)); //Amount of files that will be used to generate the files
+            // window.localStorage.setItem("totalFiles", JSON.stringify(files.length)); //The amount of files that the user uploaded. This will later be used to show how many files were valid out of the total amount uploaded
+            // window.localStorage.setItem("creationDates", JSON.stringify(creationDates)); //Save the creationDates of all the valid screenshots
+            //
+            // window.location.href = "/stats.html"; //Open stats page
         }
-        //endregion
-
-        //region Android (Extract Unix time from filename)
-        if (!dateTime) //If we don't have a valid dateTime yet
+        else
         {
-            matchesDate = fileName.match(/(20\d\d).?([0-1]\d).?([0-3]\d)/) || Array(4).fill("");
-
-            fileName = fileName.replace(matchesDate[1], "");
-            fileName = fileName.replace(matchesDate[2], "");
-            fileName = fileName.replace(matchesDate[3], "");
-
-            matchesTime = fileName.match(/([0-2]\d).?([0-5]\d).?([0-5]\d)/) || Array(4).fill("");
-
-            matchesDate = matchesDate.map(match => parseInt(match));
-            matchesTime = matchesTime.map(match => parseInt(match));
-
-            dateTime = (new Date(matchesDate[1], matchesDate[2] - 1, matchesDate[3], matchesTime[1], matchesTime[2], matchesTime[3])).getTime();
+            loadingText.innerText = event.data;
         }
-        //endregion
-
-        //region file.lastModified (Extract Unix time from file's properties)
-        if (!dateTime)
-        {
-            dateTime = file.lastModified;
-        }
-        //endregion
-
-        //Check whether or not the date is valid. I.e. Sky cotl release date < dateTime < present date + two days
-        if (1514761200000 < dateTime && dateTime < Date.now() + (2 * 86400000))
-        {
-            dateTime += (new Date(dateTime)).getTimezoneOffset() * -60000; //Adjust for local timezone
-            creationDates.add(dateTime);
-        }
-    }
-
-
-    window.localStorage.setItem("validFilesAmount", JSON.stringify(creationDates.size)); //Amount of files that will be used to generate the files
-    window.localStorage.setItem("totalFiles", JSON.stringify(files.length)); //The amount of files that the user uploaded. This will later be used to show how many files were valid out of the total amount uploaded
-    window.localStorage.setItem("creationDates", JSON.stringify(creationDates)); //Save the creationDates of all the valid screenshots
-
-    window.location.href = "/stats.html"; //Open stats page
+    };
 }, false);
-
-
-
