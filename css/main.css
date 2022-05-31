@@ -163,6 +163,7 @@ h1 {
     color: white;
 }
 
+
 p {
     color: white;
 }
@@ -170,6 +171,7 @@ p {
 em {
     color: var(--secondary-color);
     font-style: unset;
+    font-weight: bold;
 }
 
 blockquote {
