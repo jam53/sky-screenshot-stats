@@ -8,4 +8,4 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, Bootstrap, Chart.js, Modernizr, Normalize.css
+    Apache Server Configs, Bootstrap, date-fns, chartjs-adapter-date-fns, Chart.js, Modernizr, Normalize.css
