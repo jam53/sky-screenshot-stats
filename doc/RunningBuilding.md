@@ -27,4 +27,4 @@
 - Remove all the files of the previous version of the website
 - Copy the contents of the bin folder, to the root folder
 - Commit and push the changes
-- Now you can switch back to the `master` branch
+- You can now switch back to the `master` branch
