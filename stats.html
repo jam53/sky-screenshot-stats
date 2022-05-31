@@ -26,65 +26,81 @@
 </head>
 
 <body>
-    <div class="topnav">
-        <a href="index.html">Sky Screenshot Stats</a>
-    </div>
+<div class="topnav">
+    <a href="index.html">Sky Screenshot Stats</a>
+</div>
 
-    <div id="root" class="stats">
-        <div class="">
-            <div class="row">
-                <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                    <div class="inner-card">
-                        <div class="card ">
-                            <div class="chart">
-                                <canvas id="myChart">
+<div id="root" class="stats">
+    <div class="">
+        <div class="row">
+            <div class="card bg-transparent border-0 col-md-12 col-xl-12" style="padding: 0">
+                <div class="inner-card">
+                    <div class="card text-center">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
+                <div class="inner-card">
+                    <div class="card ">
+                        <p style="text-align: center">
+                            Amount Of Screenshots Per Day Of The Week
+                        </p>
+                        <div class="chart">
+                            <canvas id="screenshotsPerDay_Week">
 
-                                </canvas>
-                            </div>
+                            </canvas>
                         </div>
                     </div>
                 </div>
-                <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                    <div class="inner-card">
-                        <div class="card ">
-                            <p>
-                                Lorem Ipsum
-                            </p>
+            </div>
+            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
+                <div class="inner-card">
+                    <div class="card ">
+                        <p style="text-align: center">
+                            Amount Of Hours Played Per Day Of The Week
+                        </p>
+                        <div class="chart">
+                            <canvas id="millisecondsPerDay_Week">
+
+                            </canvas>
                         </div>
                     </div>
                 </div>
-                <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                    <div class="inner-card">
-                        <div class="card ">
-                            <p>
-                                Lorem Ipsum
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                    <div class="inner-card">
-                        <div class="card ">
-                            <p>
-                                Lorem Ipsum
-                            </p>
+            </div>
+            <div class="card bg-transparent border-0 col-md-12 col-xl-12" style="padding: 0">
+                <div class="inner-card">
+                    <div class="card ">
+                        <p style="text-align: center">
+                            Amount Of Screenshots Per Day Over Your Entire Play History
+                        </p>
+                        <div class="chart">
+                            <canvas id="screenshotsPerDay_Playtime">
+
+                            </canvas>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="bottomnav">
-        <p>
-            Made by <a href="https://jam53.github.io/jam54/about" target="_blank">jam54</a>.
-            Sky Screenshot Stats is <a href="https://github.com/jam53/sky-screenshot-stats" target="_blank">open source</a> software.
-            <a href="/about.html">About</a>.
-        </p>
-    </div>
+<div class="bottomnav">
+    <p>
+        Made by <a href="https://jam53.github.io/jam54/about" target="_blank">jam54</a>.
+        Sky Screenshot Stats is <a href="https://github.com/jam53/sky-screenshot-stats" target="_blank">open source</a> software.
+        <a href="/about.html">About</a>.
+    </p>
+</div>
 
-    <script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script type="module" src="js/vendor/plugins.js"></script>
-    <script type="module" src="js/stats.js"></script>
+<script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script type="module" src="js/vendor/plugins.js"></script>
+<!--    <script type="module" src="node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>-->
+<script type="module" src="js/Charts/ScreenshotsPerDay_Week.js"></script>
+<script type="module" src="js/Charts/millisecondsPerDay_Week.js"></script>
+<script type="module" src="js/Charts/screenshotsPerDay_Playtime.js"></script>
 </body>
 </html>
