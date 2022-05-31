@@ -109,7 +109,7 @@ onmessage = function process(event)
     //endregion
 
     //region amount of screenshots per hour of the day
-    let screenshotsPerHour_Day = Array(24).fill(0); //0 = 00:00 ; 23 = 23:00 or 11pm
+    let screenshotsPerHour_Day = Array(24).fill(0); //0 = 00:00 ; 23 = 12pm
     creationDates.forEach(timestamp => {
         let offset = (new Date(timestamp)).getTimezoneOffset() * 60000; //Adjust for local timezone
         return screenshotsPerHour_Day[(new Date(timestamp + offset)).getHours()]++
