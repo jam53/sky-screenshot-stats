@@ -1,5 +1,30 @@
-.chart {
-    position: relative;
-    width: 50vw;
-    height: 50vh;
+:root {
+    --main-color: #5865F2;
+    --secondary-color: #98aae7;
+    --secondary-color-r: 114;
+    --secondary-color-g: 137;
+    --secondary-color-b: 218;
+    --background-color: rgb(40, 42, 46);
+    --secondary-background-color: rgb(45, 47, 51);
+    --accent-background-color: rgb(37, 38, 41);
+    --third-background-color: rgb(32, 34, 37);
+    --box-background-color: rgb(53, 53, 58);
+}
+
+.stats {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.inner-card {
+    padding: 10px;
+}
+
+.card {
+    border-color: transparent;
+    background: var(--third-background-color);
+    border-radius: 10px;
+    padding: 25px;
 }
