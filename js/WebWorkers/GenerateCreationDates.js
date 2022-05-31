@@ -77,7 +77,7 @@ onmessage = function process(event)
         }
 
         filesProcessed++;
-        let percentProcessed = Math.round(filesProcessed / totalFiles);
+        let percentProcessed = Math.round((filesProcessed / totalFiles) * 100);
         postMessage(`Files processed: ${percentProcessed}% (${filesProcessed}/${totalFiles})`);
     }
 
