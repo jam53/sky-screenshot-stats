@@ -32,3 +32,7 @@
 .card p {
     margin: 0;
 }
+
+.chart {
+    height: 22vw;
+}
