@@ -14,7 +14,7 @@
 .stats {
     width: 95%;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 35px;
     padding-bottom: 60px;
 }
 
@@ -35,4 +35,16 @@
 
 .chart {
     height: 22vw;
+}
+
+.statsNumbers {
+    text-align: left;
+    margin: 23px 5px;
+    display: flex;
+}
+
+.statsNumbers h5 {
+    margin-left: 10px;
+    text-align: center;
+    line-height: 35px;
 }
