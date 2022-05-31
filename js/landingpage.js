@@ -22,7 +22,7 @@ document.getElementById("folder").addEventListener("change", function (event)
 
             window.localStorage.setItem("generatedData", JSON.stringify(generatedData)); //Save the data to localStorage, so that the stats.html page can load it in later
 
-            window.location.href = "/stats.html"; //Open stats page
+            window.location.href = "stats.html"; //Open stats page
         }
         else
         {
@@ -36,5 +36,5 @@ document.getElementById("openStats").onclick = function () {
 
     window.localStorage.setItem("generatedData", JSON.stringify(generatedData)); //Save the data to localStorage, so that the stats.html page can load it in later
 
-    window.location.href = "/stats.html"; //Open stats page
+    window.location.href = "stats.html"; //Open stats page
 }
