@@ -28,3 +28,7 @@
     border-radius: 10px;
     padding: 25px;
 }
+
+.card p {
+    margin: 0;
+}
