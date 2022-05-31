@@ -153,6 +153,10 @@ body {
     margin: 10px
 }
 
+.bottomnav a:hover {
+    color: var(--secondary-color);
+}
+
 a{
     color: var(--secondary-color);
     text-decoration: none;
