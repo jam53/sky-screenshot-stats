@@ -149,6 +149,10 @@ body {
     padding: 0 16px;
 }
 
+.bottomnav p {
+    margin: 10px
+}
+
 a{
     color: var(--secondary-color);
     text-decoration: none;

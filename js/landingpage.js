@@ -20,13 +20,9 @@ document.getElementById("folder").addEventListener("change", function (event)
         {
             let generatedData = event.data;
 
-            console.log(generatedData);
+            window.localStorage.setItem("generatedData", JSON.stringify(generatedData)); //Save the data to localStorage, so that the stats.html page can load it in later
 
-            // window.localStorage.setItem("validFilesAmount", JSON.stringify(creationDates.size)); //Amount of files that will be used to generate the files
-            // window.localStorage.setItem("totalFiles", JSON.stringify(files.length)); //The amount of files that the user uploaded. This will later be used to show how many files were valid out of the total amount uploaded
-            // window.localStorage.setItem("creationDates", JSON.stringify(creationDates)); //Save the creationDates of all the valid screenshots
-            //
-            // window.location.href = "/stats.html"; //Open stats page
+            window.location.href = "/stats.html"; //Open stats page
         }
         else
         {
