@@ -9,7 +9,7 @@ document.getElementById("folder").addEventListener("change", function (event)
     document.getElementById("loadingIcon").className = "";
     const loadingText = document.getElementById("loadingText");
 
-    let worker = new Worker(new URL("./WebWorkers/GenerateCreationDates.js", import.meta.url));
+    let worker = new Worker(new URL("./WebWorkers/generate-creation-dates.js", import.meta.url));
 
     const files = ([...event.target.files]).filter(file => file && file['type'].split('/')[0] === 'image'); //Remove all non image files
     worker.postMessage(files);

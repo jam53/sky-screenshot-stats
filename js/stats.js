@@ -97,3 +97,16 @@ function millisecondsToTime(milliseconds)
     return stringToReturn;
 }
 
+/**
+ * This function makes it so the "screenshotsPerHour_Card" and "screensPerMonth_Card" elements, have the same height at all times
+ */
+function setEqualHeight()
+{
+    setTimeout(() => {
+        const divh = document.getElementById("screenshotsPerHour_Card").offsetHeight
+        document.getElementById("screensPerMonth_Card").style.height = divh + "px";
+    }, 0);
+}
+
+setEqualHeight();
+window.onresize = setEqualHeight;

@@ -33,10 +33,6 @@
     margin: 0;
 }
 
-.chart {
-    height: 22vw;
-}
-
 .statsNumbers {
     text-align: left;
     margin: 23px 5px;
@@ -47,4 +43,8 @@
     margin-left: 10px;
     text-align: center;
     line-height: 35px;
+}
+
+.chart {
+    height: 100%;
 }
