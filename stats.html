@@ -31,96 +31,69 @@
 </div>
 
 <div id="root" class="stats">
-    <div class="">
-        <div class="row">
-            <div class="card bg-transparent border-0 col-md-12 col-xl-12" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card text-center" id="statsNumbers">
-                    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-xl-12 p-3">
+            <div class="card">
+                <div class="text-center" id="statsNumbers"></div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-6 p-3">
+            <div class="card">
+                <p style="text-align: center">
+                    Amount Of Screenshots Per Day Of The Week
+                </p>
+                <div class="chart">
+                    <canvas id="screenshotsPerDay_Week"></canvas>
                 </div>
             </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Screenshots Per Day Of The Week
-                        </p>
-                        <div class="chart">
-                            <canvas id="screenshotsPerDay_Week">
-
-                            </canvas>
-                        </div>
-                    </div>
+        </div>
+        <div class="col-md-12 col-xl-6 p-3">
+            <div class="card">
+                <p style="text-align: center">
+                    Amount Of Hours Played Per Day Of The Week
+                </p>
+                <div class="chart">
+                    <canvas id="millisecondsPerDay_Week"></canvas>
                 </div>
             </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Hours Played Per Day Of The Week
-                        </p>
-                        <div class="chart">
-                            <canvas id="millisecondsPerDay_Week">
-
-                            </canvas>
-                        </div>
-                    </div>
+        </div>
+        <div class="col-md-12 col-xl-6 p-3 mb-3">
+            <div class="card" id="screenshotsPerHour_Card">
+                <p style="text-align: center">
+                    Amount Of Screenshots Per Hour Of The Day
+                </p>
+                <div class="chart">
+                    <canvas id="screenshotsPerHour_Day"></canvas>
                 </div>
             </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Screenshots Per Hour Of The Day
-                        </p>
-                        <div class="chart">
-                            <canvas id="screenshotsPerHour_Day">
-
-                            </canvas>
-                        </div>
-                    </div>
+        </div>
+        <div class="col-md-12 col-xl-6 p-3 mb-3">
+            <div class="card" id="screensPerMonth_Card">
+                <p style="text-align: center">
+                    Amount Of Screenshots Per Month Of The Year
+                </p>
+                <div class="chart">
+                    <canvas id="screenshotsPerMonth_Playtime"></canvas>
                 </div>
             </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-6" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Screenshots Per Month Of The Year
-                        </p>
-                        <div class="chart" >
-                            <canvas id="screenshotsPerMonth_Playtime">
-
-                            </canvas>
-                        </div>
-                    </div>
+        </div>
+        <div class="col-md-12 col-xl-12 p-3 pt-1">
+            <div class="card">
+                <p style="text-align: center">
+                    Amount Of Screenshots Per Day Over Your Entire Play History
+                </p>
+                <div class="">
+                    <canvas id="screenshotsPerDay_Playtime"></canvas>
                 </div>
             </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-12" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Screenshots Per Day Over Your Entire Play History
-                        </p>
-                        <div class="">
-                            <canvas id="screenshotsPerDay_Playtime">
-
-                            </canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-transparent border-0 col-md-12 col-xl-12" style="padding: 0">
-                <div class="inner-card">
-                    <div class="card ">
-                        <p style="text-align: center">
-                            Amount Of Minutes Played Per Day Over Your Entire Play History
-                        </p>
-                        <div class="">
-                            <canvas id="millisecondsPerDay_Playtime">
-
-                            </canvas>
-                        </div>
-                    </div>
+        </div>
+        <div class="col-md-12 col-xl-12 p-3">
+            <div class="card">
+                <p style="text-align: center">
+                    Amount Of Minutes Played Per Day Over Your Entire Play History
+                </p>
+                <div class="">
+                    <canvas id="millisecondsPerDay_Playtime"></canvas>
                 </div>
             </div>
         </div>
@@ -137,12 +110,12 @@
 
 <script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script type="module" src="js/vendor/plugins.js"></script>
-<script type="module" src="js/Stats.js"></script>
-<script type="module" src="js/Charts/ScreenshotsPerDay_Week.js"></script>
-<script type="module" src="js/Charts/millisecondsPerDay_Week.js"></script>
-<script type="module" src="js/Charts/screenshotsPerDay_Playtime.js"></script>
-<script type="module" src="js/Charts/millisecondsPerDay_Playtime.js"></script>
-<script type="module" src="js/Charts/screenshotsPerHour_Day.js"></script>
-<script type="module" src="js/Charts/screenshotsPerMonth_Playtime.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module" src="js/Charts/screenshots-per-day_week.js"></script>
+<script type="module" src="js/Charts/milliseconds-per-day_week.js"></script>
+<script type="module" src="js/Charts/screenshots-per-day_playtime.js"></script>
+<script type="module" src="js/Charts/milliseconds-per-day_playtime.js"></script>
+<script type="module" src="js/Charts/screenshots-per-hour_day.js"></script>
+<script type="module" src="js/Charts/screenshots-per-month_playtime.js"></script>
 </body>
 </html>
