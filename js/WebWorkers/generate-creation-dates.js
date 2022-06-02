@@ -69,8 +69,8 @@ onmessage = function process(event)
         }
         //endregion
 
-        //Check whether or not the date is valid. I.e. Sky cotl release date < dateTime < present date + two days
-        if (1514761200000 < dateTime && dateTime < Date.now() + (2 * 86400000))
+        //Check whether or not the date is valid. I.e. dateTime < present date + two days
+        if (dateTime < Date.now() + (2 * 86400000))
         {
             dateTime += (new Date(dateTime)).getTimezoneOffset() * -60000; //Adjust for local timezone
             creationDates.add(dateTime);
