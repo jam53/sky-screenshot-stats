@@ -59,6 +59,23 @@ const config = {
     options: {
         responsive: true,
         maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "right",
+            }
+        },
+        animation: {
+            onComplete: () => {
+                delayed = true;
+            },
+            delay: (context) => {
+                let delay = 0;
+                if (context.type === "data" && context.mode === "default" && !delayed) {
+                    delay = context.dataIndex * 100 + context.dataIndex * 100;
+                }
+                return delay;
+            },
+        },
     }
 };
 
