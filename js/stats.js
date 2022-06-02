@@ -105,7 +105,7 @@ function setEqualHeight()
     setTimeout(() => {
         const divh = document.getElementById("screenshotsPerHour_Card").offsetHeight
         document.getElementById("screensPerMonth_Card").style.height = divh + "px";
-    }, 0);
+    }, 1000);
 }
 
 setEqualHeight();
