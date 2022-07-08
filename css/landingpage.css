@@ -44,19 +44,10 @@ input[type="file"] {
 
 .landingpage {
     text-align: center;
-    width: 40%;
+    max-width: 770px;
     margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 40px;
 }
-
-/*Make the webpage take up the entire width of the screen, if the page is being viewed on a mobile device*/
-@media only screen and (max-width: 1100px) {
-    .landingpage {
-        width: 90%;
-    }
-}
-
 
 .button {
     border: none;
