@@ -19,7 +19,7 @@
     "dependencies": {
         "bootstrap": "^5.2.3",
         "chart.js": "^4.0.1",
-        "chartjs-adapter-date-fns": "^2.0.1",
+        "chartjs-adapter-date-fns": "^3.0.0",
         "date-fns": "^2.29.3"
     },
     "devDependencies": {
