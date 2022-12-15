@@ -24,7 +24,7 @@
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "^2.8.1",
-        "@parcel/transformer-webmanifest": "^2.8.1",
+        "@parcel/transformer-webmanifest": "^2.8.2",
         "parcel": "^2.8.1",
         "rimraf": "^3.0.0"
     }
