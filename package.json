@@ -26,6 +26,6 @@
         "@parcel/packager-raw-url": "^2.8.2",
         "@parcel/transformer-webmanifest": "^2.8.2",
         "parcel": "^2.8.2",
-        "rimraf": "^4.0.7"
+        "rimraf": "^4.1.0"
     }
 }
