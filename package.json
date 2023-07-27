@@ -17,7 +17,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "bootstrap": "^5.3.0",
+        "bootstrap": "^5.3.1",
         "chart.js": "^4.3.2",
         "chartjs-adapter-date-fns": "^3.0.0",
         "date-fns": "^2.30.0"
