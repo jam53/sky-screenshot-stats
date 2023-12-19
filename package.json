@@ -20,7 +20,7 @@
         "bootstrap": "^5.3.2",
         "chart.js": "^4.4.1",
         "chartjs-adapter-date-fns": "^3.0.0",
-        "date-fns": "^2.30.0"
+        "date-fns": "^3.0.0"
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "^2.10.3",
