@@ -150,6 +150,29 @@ onmessage = function process(event)
     });
     //endregion
 
+    //region longest play streak, as in the most consecutive days played
+    const timestamps = Object.keys(screenshotsPerDay_Playtime).map(Number).sort((a, b) => a - b);
+
+    let longestPlayStreak = 0;
+    let currentPlayStreak = 1;
+
+    for (let i = 1; i < timestamps.length; i++)
+    {
+        // Check if the current timestamp is exactly 1 day after the previous one
+        if(timestamps[i] - timestamps[i - 1] === 86400000)
+        {
+            currentPlayStreak++;
+        }
+        else
+        {
+            longestPlayStreak = Math.max(longestPlayStreak, currentPlayStreak);
+            currentPlayStreak = 1;
+        }
+    }
+
+    longestPlayStreak = Math.max(longestPlayStreak, currentPlayStreak);
+    //endregion
+
     postMessage("Finishing touches");
     let generatedData = {};
     generatedData["validFilesAmount"] = creationDates.length;
@@ -164,8 +187,9 @@ onmessage = function process(event)
     generatedData["daysSkyOpened"] = Object.keys(screenshotsPerDay_Playtime).length;
     generatedData["millisecondsPlayedTotal"] = millisecondsPerDay_Week.reduce((partialSum, a) => partialSum + a, 0); //Takes the sum
     generatedData["screenshotsTotal"] = screenshotsPerDay_Week.reduce((partialSum, a) => partialSum + a, 0); //Takes the sum
-    generatedData["maxScreenshotsOnADay"] = Math.max(...(Object.values(screenshotsPerDay_Playtime))); //Takes the max value of the object
-    generatedData["maxMillisecondsOnADay"] = Math.max(...(Object.values(millisecondsPerDay_Playtime))); //Takes the max value of the object
+    generatedData["maxScreenshotsOnADay"] = Math.max(...(Object.values(screenshotsPerDay_Playtime)));
+    generatedData["maxMillisecondsOnADay"] = Math.max(...(Object.values(millisecondsPerDay_Playtime)));
+    generatedData["longestPlayStreak"] = longestPlayStreak;
 
 
     postMessage(generatedData); //Passing data back to the script that created this worker
