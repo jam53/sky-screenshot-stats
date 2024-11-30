@@ -1,7 +1,7 @@
 # Project Setup
 
 ## Prerequisites
-- An IDE of your choice, we recommend [Visual Studio Code](https://code.visualstudio.com/)
+- An IDE of your choice, we recommend [Webstorm](https://www.jetbrains.com/webstorm/) or [Visual Studio Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/)
 - [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/) as a GUI alternative
 
