@@ -12,12 +12,12 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "chart.js": "^4.4.2",
+        "chart.js": "^4.4.6",
         "chartjs-adapter-date-fns": "^3.0.0",
         "date-fns": "^3.6.0"
     },
     "devDependencies": {
-        "rimraf": "^5.0.5",
+        "rimraf": "^6.0.1",
         "vite": "^6.0.1"
     }
 }
