@@ -4,7 +4,7 @@ Gain an insight in your Sky playtime & other statistics. By analyzing the screen
 ![](./doc/img/SkyScreenshotStats_StatsPage_Quality70_Effort8.avif)
 
 # Using the tool
-You can try out the tool for yourself by surfing to [this link](https://jam53.github.io/sky-screenshot-stats/).
+You can try out the tool by visiting [skystats.jam54.com](https://skystats.jam54.com).
 
 # Documentation
 - [Cloning and setting up the project](./doc/ProjectSetup.md)
