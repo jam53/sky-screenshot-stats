@@ -11,13 +11,13 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "bootstrap": "^5.3.3",
-        "chart.js": "^4.4.6",
+        "bootstrap": "^5.3.6",
+        "chart.js": "^4.4.9",
         "chartjs-adapter-date-fns": "^3.0.0",
         "date-fns": "^4.1.0"
     },
     "devDependencies": {
         "rimraf": "^6.0.1",
-        "vite": "^6.0.1"
+        "vite": "^6.3.5"
     }
 }
